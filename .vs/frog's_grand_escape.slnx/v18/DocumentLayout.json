@@ -1,0 +1,275 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\3D\uAC8C\uC784\uD504\uB85C\uADF8\uB798\uBC0D\\frog\u0027s_grand_escape\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\3d\uAC8C\uC784\uD504\uB85C\uADF8\uB798\uBC0D\\frog\u0027s_grand_escape\\assets\\script\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\3d\uAC8C\uC784\uD504\uB85C\uADF8\uB798\uBC0D\\frog\u0027s_grand_escape\\assets\\script\\playercollisionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\playercollisionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\3d\uAC8C\uC784\uD504\uB85C\uADF8\uB798\uBC0D\\frog\u0027s_grand_escape\\assets\\script\\playerledgeclimb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\playerledgeclimb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\3d\uAC8C\uC784\uD504\uB85C\uADF8\uB798\uBC0D\\frog\u0027s_grand_escape\\assets\\script\\playerwallinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\playerwallinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\3d\uAC8C\uC784\uD504\uB85C\uADF8\uB798\uBC0D\\frog\u0027s_grand_escape\\assets\\script\\playerstatusaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\playerstatusaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\3d\uAC8C\uC784\uD504\uB85C\uADF8\uB798\uBC0D\\frog\u0027s_grand_escape\\assets\\script\\playercombat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\playercombat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\3d\uAC8C\uC784\uD504\uB85C\uADF8\uB798\uBC0D\\frog\u0027s_grand_escape\\assets\\script\\playerdash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\playerdash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\3d\uAC8C\uC784\uD504\uB85C\uADF8\uB798\uBC0D\\frog\u0027s_grand_escape\\assets\\script\\playerjump.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\playerjump.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\3d\uAC8C\uC784\uD504\uB85C\uADF8\uB798\uBC0D\\frog\u0027s_grand_escape\\assets\\script\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\3d\uAC8C\uC784\uD504\uB85C\uADF8\uB798\uBC0D\\frog\u0027s_grand_escape\\assets\\script\\playeranimationfacade.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\playeranimationfacade.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\3d\uAC8C\uC784\uD504\uB85C\uADF8\uB798\uBC0D\\frog\u0027s_grand_escape\\assets\\script\\playerinputreader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\playerinputreader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\3d\uAC8C\uC784\uD504\uB85C\uADF8\uB798\uBC0D\\frog\u0027s_grand_escape\\assets\\script\\playercore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\playercore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\3d\uAC8C\uC784\uD504\uB85C\uADF8\uB798\uBC0D\\frog\u0027s_grand_escape\\assets\\smallscaleint\\soldier - 2d pixel character\\example scene\\scripts\\smoothcamerafollow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\smallscaleint\\soldier - 2d pixel character\\example scene\\scripts\\smoothcamerafollow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\3d\uAC8C\uC784\uD504\uB85C\uADF8\uB798\uBC0D\\frog\u0027s_grand_escape\\assets\\script\\universaltimer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\universaltimer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\3d\uAC8C\uC784\uD504\uB85C\uADF8\uB798\uBC0D\\frog\u0027s_grand_escape\\assets\\script\\gamestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\gamestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PlayerController.cs",
+              "DocumentMoniker": "C:\\3D\uAC8C\uC784\uD504\uB85C\uADF8\uB798\uBC0D\\frog\u0027s_grand_escape\\Assets\\Script\\PlayerController.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\PlayerController.cs",
+              "ToolTip": "C:\\3D\uAC8C\uC784\uD504\uB85C\uADF8\uB798\uBC0D\\frog\u0027s_grand_escape\\Assets\\Script\\PlayerController.cs",
+              "RelativeToolTip": "Assets\\Script\\PlayerController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-13T09:28:20.202Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PlayerCollisionHandler.cs",
+              "DocumentMoniker": "C:\\3D\uAC8C\uC784\uD504\uB85C\uADF8\uB798\uBC0D\\frog\u0027s_grand_escape\\Assets\\Script\\PlayerCollisionHandler.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\PlayerCollisionHandler.cs",
+              "ToolTip": "C:\\3D\uAC8C\uC784\uD504\uB85C\uADF8\uB798\uBC0D\\frog\u0027s_grand_escape\\Assets\\Script\\PlayerCollisionHandler.cs",
+              "RelativeToolTip": "Assets\\Script\\PlayerCollisionHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAF4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-13T09:27:59.048Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PlayerLedgeClimb.cs",
+              "DocumentMoniker": "C:\\3D\uAC8C\uC784\uD504\uB85C\uADF8\uB798\uBC0D\\frog\u0027s_grand_escape\\Assets\\Script\\PlayerLedgeClimb.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\PlayerLedgeClimb.cs",
+              "ToolTip": "C:\\3D\uAC8C\uC784\uD504\uB85C\uADF8\uB798\uBC0D\\frog\u0027s_grand_escape\\Assets\\Script\\PlayerLedgeClimb.cs",
+              "RelativeToolTip": "Assets\\Script\\PlayerLedgeClimb.cs",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAQwGAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-13T09:27:43.228Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PlayerWallInteraction.cs",
+              "DocumentMoniker": "C:\\3D\uAC8C\uC784\uD504\uB85C\uADF8\uB798\uBC0D\\frog\u0027s_grand_escape\\Assets\\Script\\PlayerWallInteraction.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\PlayerWallInteraction.cs",
+              "ToolTip": "C:\\3D\uAC8C\uC784\uD504\uB85C\uADF8\uB798\uBC0D\\frog\u0027s_grand_escape\\Assets\\Script\\PlayerWallInteraction.cs",
+              "RelativeToolTip": "Assets\\Script\\PlayerWallInteraction.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAQwFEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-13T09:27:17.769Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PlayerStatusAction.cs",
+              "DocumentMoniker": "C:\\3D\uAC8C\uC784\uD504\uB85C\uADF8\uB798\uBC0D\\frog\u0027s_grand_escape\\Assets\\Script\\PlayerStatusAction.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\PlayerStatusAction.cs",
+              "ToolTip": "C:\\3D\uAC8C\uC784\uD504\uB85C\uADF8\uB798\uBC0D\\frog\u0027s_grand_escape\\Assets\\Script\\PlayerStatusAction.cs",
+              "RelativeToolTip": "Assets\\Script\\PlayerStatusAction.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAQwDgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-13T09:26:51.519Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "PlayerCombat.cs",
+              "DocumentMoniker": "C:\\3D\uAC8C\uC784\uD504\uB85C\uADF8\uB798\uBC0D\\frog\u0027s_grand_escape\\Assets\\Script\\PlayerCombat.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\PlayerCombat.cs",
+              "ToolTip": "C:\\3D\uAC8C\uC784\uD504\uB85C\uADF8\uB798\uBC0D\\frog\u0027s_grand_escape\\Assets\\Script\\PlayerCombat.cs",
+              "RelativeToolTip": "Assets\\Script\\PlayerCombat.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAQwEwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-13T09:26:35.157Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "PlayerDash.cs",
+              "DocumentMoniker": "C:\\3D\uAC8C\uC784\uD504\uB85C\uADF8\uB798\uBC0D\\frog\u0027s_grand_escape\\Assets\\Script\\PlayerDash.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\PlayerDash.cs",
+              "ToolTip": "C:\\3D\uAC8C\uC784\uD504\uB85C\uADF8\uB798\uBC0D\\frog\u0027s_grand_escape\\Assets\\Script\\PlayerDash.cs",
+              "RelativeToolTip": "Assets\\Script\\PlayerDash.cs",
+              "ViewState": "AgIAADsAAAAAAAAAAAAQwGwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-13T09:26:00.871Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "PlayerJump.cs",
+              "DocumentMoniker": "C:\\3D\uAC8C\uC784\uD504\uB85C\uADF8\uB798\uBC0D\\frog\u0027s_grand_escape\\Assets\\Script\\PlayerJump.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\PlayerJump.cs",
+              "ToolTip": "C:\\3D\uAC8C\uC784\uD504\uB85C\uADF8\uB798\uBC0D\\frog\u0027s_grand_escape\\Assets\\Script\\PlayerJump.cs",
+              "RelativeToolTip": "Assets\\Script\\PlayerJump.cs",
+              "ViewState": "AgIAADYAAAAAAAAAAAAzwGcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-13T09:25:41.286Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "PlayerMovement.cs",
+              "DocumentMoniker": "C:\\3D\uAC8C\uC784\uD504\uB85C\uADF8\uB798\uBC0D\\frog\u0027s_grand_escape\\Assets\\Script\\PlayerMovement.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\PlayerMovement.cs",
+              "ToolTip": "C:\\3D\uAC8C\uC784\uD504\uB85C\uADF8\uB798\uBC0D\\frog\u0027s_grand_escape\\Assets\\Script\\PlayerMovement.cs",
+              "RelativeToolTip": "Assets\\Script\\PlayerMovement.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAQwFUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-13T09:25:23.602Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "PlayerAnimationFacade.cs",
+              "DocumentMoniker": "C:\\3D\uAC8C\uC784\uD504\uB85C\uADF8\uB798\uBC0D\\frog\u0027s_grand_escape\\Assets\\Script\\PlayerAnimationFacade.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\PlayerAnimationFacade.cs",
+              "ToolTip": "C:\\3D\uAC8C\uC784\uD504\uB85C\uADF8\uB798\uBC0D\\frog\u0027s_grand_escape\\Assets\\Script\\PlayerAnimationFacade.cs",
+              "RelativeToolTip": "Assets\\Script\\PlayerAnimationFacade.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAA+wCsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-13T09:24:55.979Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "PlayerInputReader.cs",
+              "DocumentMoniker": "C:\\3D\uAC8C\uC784\uD504\uB85C\uADF8\uB798\uBC0D\\frog\u0027s_grand_escape\\Assets\\Script\\PlayerInputReader.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\PlayerInputReader.cs",
+              "ToolTip": "C:\\3D\uAC8C\uC784\uD504\uB85C\uADF8\uB798\uBC0D\\frog\u0027s_grand_escape\\Assets\\Script\\PlayerInputReader.cs",
+              "RelativeToolTip": "Assets\\Script\\PlayerInputReader.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-13T09:24:20.183Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "PlayerCore.cs",
+              "DocumentMoniker": "C:\\3D\uAC8C\uC784\uD504\uB85C\uADF8\uB798\uBC0D\\frog\u0027s_grand_escape\\Assets\\Script\\PlayerCore.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\PlayerCore.cs",
+              "ToolTip": "C:\\3D\uAC8C\uC784\uD504\uB85C\uADF8\uB798\uBC0D\\frog\u0027s_grand_escape\\Assets\\Script\\PlayerCore.cs",
+              "RelativeToolTip": "Assets\\Script\\PlayerCore.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAQwDwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-13T09:24:03.172Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "SmoothCameraFollow.cs",
+              "DocumentMoniker": "C:\\3D\uAC8C\uC784\uD504\uB85C\uADF8\uB798\uBC0D\\frog\u0027s_grand_escape\\Assets\\SmallScaleInt\\Soldier - 2D Pixel Character\\Example scene\\Scripts\\SmoothCameraFollow.cs",
+              "RelativeDocumentMoniker": "Assets\\SmallScaleInt\\Soldier - 2D Pixel Character\\Example scene\\Scripts\\SmoothCameraFollow.cs",
+              "ToolTip": "C:\\3D\uAC8C\uC784\uD504\uB85C\uADF8\uB798\uBC0D\\frog\u0027s_grand_escape\\Assets\\SmallScaleInt\\Soldier - 2D Pixel Character\\Example scene\\Scripts\\SmoothCameraFollow.cs",
+              "RelativeToolTip": "Assets\\SmallScaleInt\\Soldier - 2D Pixel Character\\Example scene\\Scripts\\SmoothCameraFollow.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-13T09:15:38.164Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "UniversalTimer.cs",
+              "DocumentMoniker": "C:\\3D\uAC8C\uC784\uD504\uB85C\uADF8\uB798\uBC0D\\frog\u0027s_grand_escape\\Assets\\Script\\UniversalTimer.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\UniversalTimer.cs",
+              "ToolTip": "C:\\3D\uAC8C\uC784\uD504\uB85C\uADF8\uB798\uBC0D\\frog\u0027s_grand_escape\\Assets\\Script\\UniversalTimer.cs",
+              "RelativeToolTip": "Assets\\Script\\UniversalTimer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-13T08:59:11.221Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "GameState.cs",
+              "DocumentMoniker": "C:\\3D\uAC8C\uC784\uD504\uB85C\uADF8\uB798\uBC0D\\frog\u0027s_grand_escape\\Assets\\Script\\GameState.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\GameState.cs",
+              "ToolTip": "C:\\3D\uAC8C\uC784\uD504\uB85C\uADF8\uB798\uBC0D\\frog\u0027s_grand_escape\\Assets\\Script\\GameState.cs",
+              "RelativeToolTip": "Assets\\Script\\GameState.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-13T08:55:40.497Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
