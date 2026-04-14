@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace SmallScaleInteractive._2DCharacter
 {
@@ -85,21 +85,6 @@ namespace SmallScaleInteractive._2DCharacter
         private void HandleJumpInput()
         {
             Vector2 jumpDirection = (facingHorizontalDirection == 1) ? Vector2.left : Vector2.right;
-
-            // Trigger jump animation immediately so it doesn't feel delayed.
-            // If jump is not possible, revert the animation state.
-            if (animator != null)
-            {
-                UpdateAnimation(jumpDirection, false, true);
-            }
-
-            if (!CanJump(jumpDirection))
-            {
-                // Revert animation because jump won't happen
-                EndMoveAnimation();
-                return;
-            }
-
             TryMove(jumpDirection, 2, true);
         }
 
