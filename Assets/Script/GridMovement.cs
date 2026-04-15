@@ -1,7 +1,10 @@
 using UnityEngine;
 
+
 namespace SmallScaleInteractive._2DCharacter
 {
+    [RequireComponent(typeof(Animator))]
+    [RequireComponent(typeof(CapsuleCollider2D))]
     public class GridMovement : MonoBehaviour
     {
         [Header("Grid Settings")]
@@ -17,6 +20,7 @@ namespace SmallScaleInteractive._2DCharacter
         [SerializeField] private LayerMask rideableLayer;
 
         [Header("Jump Settings")]
+        [SerializeField] private bool jump = true;
         [SerializeField] private KeyCode jumpKey = KeyCode.Space;
 
         [Header("Respawn Settings")]
@@ -60,11 +64,24 @@ namespace SmallScaleInteractive._2DCharacter
         {
             FollowCurrentPlatform();
 
+            // 주변 장애물(이동하는 차량 등)이 플레이어에게 부딪혔는지 매 프레임 검사
+            CheckForObstacleCollision();
+
             if (!isMoving)
                 HandleInput();
 
             MoveToTarget();
             UpdateCurrentPlatform();
+        }
+
+        private void CheckForObstacleCollision()
+        {
+            // 항상 검사: 이동 중에도 부딪힐 수 있으므로 이동 여부와 상관없이 확인
+            Collider2D hit = Physics2D.OverlapBox(GetFootPosition(), checkBoxSize, 0f, obstacleLayer);
+            if (hit != null)
+            {
+                HandleObstacleCollision();
+            }
         }
 
         private void FollowCurrentPlatform()
@@ -95,7 +112,7 @@ namespace SmallScaleInteractive._2DCharacter
 
         private void HandleInput()
         {
-            if (Input.GetKeyDown(jumpKey))
+            if (Input.GetKeyDown(jumpKey) && jump)
             {
                 HandleJumpInput();
                 return;
@@ -115,6 +132,13 @@ namespace SmallScaleInteractive._2DCharacter
         {
             Vector2 jumpDirection = (facingHorizontalDirection == 1) ? Vector2.left : Vector2.right;
             Vector3 landingCell = targetPosition + (Vector3)(jumpDirection * cellSize * 2);
+
+            // 착지 지점에 장애물이 있으면 충돌 처리
+            if (IsBlocked(landingCell))
+            {
+                HandleObstacleCollision();
+                return;
+            }
 
             if (!CanJump(jumpDirection))
             {
@@ -138,7 +162,16 @@ namespace SmallScaleInteractive._2DCharacter
             Vector3 destination = targetPosition + (Vector3)(direction * cellSize * distanceInCells);
 
             if (!CanStandOn(destination))
+            {
+                // 장애물로 인해 설 수 없는 경우, 장애물 충돌 처리
+                if (IsBlocked(destination))
+                {
+                    HandleObstacleCollision();
+                    return;
+                }
+
                 return;
+            }
 
             targetPosition = destination;
             isMoving = true;
@@ -235,6 +268,24 @@ namespace SmallScaleInteractive._2DCharacter
             EndMoveAnimation();
 
             Debug.Log("강에 빠짐! 시작 위치로 복귀");
+        }
+
+        private void HandleObstacleCollision()
+        {
+            // 장애물에 충돌했을 때 처리: 체력 감소 및 시작 위치로 복귀
+            pendingFallToWater = false;
+            isJumping = false;
+            isMoving = false;
+
+            GameState.Instance.DecreaseHP(1);
+
+            transform.position = startPosition;
+            targetPosition = startPosition;
+            currentPlatform = null;
+
+            EndMoveAnimation();
+
+            Debug.Log("장애물에 부딪힘! 시작 위치로 복귀");
         }
 
         private Vector3 SnapToGrid(Vector3 pos)

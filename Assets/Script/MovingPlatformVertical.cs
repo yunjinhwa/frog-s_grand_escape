@@ -144,7 +144,19 @@ public class MovingPlatformVertical : MonoBehaviour
 
         if (completelyAbove || completelyBelow || completelyLeft || completelyRight)
         {
-            Destroy(gameObject);
+            // 플랫폼을 삭제하는 대신 초기 위치로 되돌립니다.
+            if (useLocalPosition)
+            {
+                transform.localPosition = startPosition;
+            }
+            else
+            {
+                transform.position = startPosition;
+            }
+
+            // 순간 이동으로 인한 큰 DeltaMovement를 방지합니다.
+            lastWorldPosition = transform.position;
+            DeltaMovement = Vector3.zero;
         }
     }
 
