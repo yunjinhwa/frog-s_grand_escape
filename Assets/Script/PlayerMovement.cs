@@ -12,6 +12,9 @@ namespace SmallScaleInteractive._2DCharacter
         [SerializeField] private LayerMask obstacleLayer;
         [SerializeField] private Vector2 checkBoxSize = new Vector2(0.4f, 0.4f);
 
+        [Header("Rideable Check")]
+        [SerializeField] private LayerMask rideableLayer;   // 올라탈 수 있는 오브젝트 레이어
+
         [Header("Jump Settings")]
         [SerializeField] private KeyCode jumpKey = KeyCode.Space;
 
@@ -22,11 +25,9 @@ namespace SmallScaleInteractive._2DCharacter
         private bool isJumpMoving;
         private Vector3 targetPosition;
 
-        // 애니메이션용 전체 방향
         // 0 = 오른쪽, 1 = 왼쪽, 2 = 아래, 3 = 위
         private int currentDirection = 0;
 
-        // 점프용 좌우 방향 기억
         // 0 = 오른쪽, 1 = 왼쪽
         private int facingHorizontalDirection = 0;
 
@@ -86,8 +87,6 @@ namespace SmallScaleInteractive._2DCharacter
         {
             Vector2 jumpDirection = (facingHorizontalDirection == 1) ? Vector2.left : Vector2.right;
 
-            // Trigger jump animation immediately so it doesn't feel delayed.
-            // If jump is not possible, revert the animation state.
             if (animator != null)
             {
                 UpdateAnimation(jumpDirection, false, true);
@@ -95,7 +94,6 @@ namespace SmallScaleInteractive._2DCharacter
 
             if (!CanJump(jumpDirection))
             {
-                // Revert animation because jump won't happen
                 EndMoveAnimation();
                 return;
             }
@@ -114,7 +112,8 @@ namespace SmallScaleInteractive._2DCharacter
             }
             else
             {
-                if (IsBlocked(destination))
+                // 막혀 있거나, 올라탈 수 있는 오브젝트가 없으면 이동 불가
+                if (IsBlocked(destination) || !HasRideableObject(destination))
                     return;
             }
 
@@ -140,12 +139,22 @@ namespace SmallScaleInteractive._2DCharacter
             if (IsBlocked(landingCell))
                 return false;
 
+            // 착지 칸에 올라탈 오브젝트가 없으면 점프 불가
+            if (!HasRideableObject(landingCell))
+                return false;
+
             return true;
         }
 
         private bool IsBlocked(Vector3 worldPosition)
         {
             Collider2D hit = Physics2D.OverlapBox(worldPosition, checkBoxSize, 0f, obstacleLayer);
+            return hit != null;
+        }
+
+        private bool HasRideableObject(Vector3 worldPosition)
+        {
+            Collider2D hit = Physics2D.OverlapBox(worldPosition, checkBoxSize, 0f, rideableLayer);
             return hit != null;
         }
 
@@ -171,8 +180,9 @@ namespace SmallScaleInteractive._2DCharacter
 
         private Vector3 SnapToGrid(Vector3 pos)
         {
-            float x = Mathf.Round(pos.x / cellSize) * cellSize;
-            float y = Mathf.Round(pos.y / cellSize) * cellSize;
+            float half = cellSize * 0.5f;
+            float x = Mathf.Round((pos.x - half) / cellSize) * cellSize + half;
+            float y = Mathf.Round((pos.y - half) / cellSize) * cellSize + half;
             return new Vector3(x, y, pos.z);
         }
 
