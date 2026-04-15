@@ -1,32 +1,84 @@
 using UnityEngine;
 
+[RequireComponent(typeof(BoxCollider2D))]
+[RequireComponent(typeof(Rigidbody2D))]
 public class MovingPlatformVertical : MonoBehaviour
 {
-    [Header("Move Settings")]
-    [SerializeField] private float moveDistance = 2f;   // 시작 위치 기준 위/아래 이동 거리
-    [SerializeField] private float moveSpeed = 2f;      // 이동 속도
-    [SerializeField] private bool startGoingUp = true;  // 시작 방향
+    public enum PlatformMoveMode
+    {
+        PingPong,   // 위아래 왕복
+        Flow        // 한 방향으로 계속 이동 후 화면 밖에서 삭제
+    }
 
-    [Header("Optional")]
+    public enum FlowDirection
+    {
+        Up,
+        Down
+    }
+
+    [Header("Mode")]
+    [SerializeField] private PlatformMoveMode moveMode = PlatformMoveMode.PingPong;
+
+    [Header("Common Move Settings")]
+    [SerializeField] private float moveSpeed = 2f;
     [SerializeField] private bool useLocalPosition = false;
+
+    [Header("PingPong Settings")]
+    [SerializeField] private float moveDistance = 2f;
+    [SerializeField] private bool startGoingUp = true;
+
+    [Header("Flow Settings")]
+    [SerializeField] private FlowDirection flowDirection = FlowDirection.Down;
+
+    [Header("Destroy Settings")]
+    [SerializeField] private float destroyViewportMargin = 0.2f;
+    [SerializeField] private bool destroyWhenOffScreen = true;
 
     private Vector3 startPosition;
     private Vector3 targetPosition;
+    private Vector3 lastWorldPosition;
     private int direction = 1;
+
+    public Vector3 DeltaMovement { get; private set; }
 
     private void Start()
     {
         startPosition = useLocalPosition ? transform.localPosition : transform.position;
+
         direction = startGoingUp ? 1 : -1;
-        SetNextTarget();
+        SetNextTargetForPingPong();
+
+        lastWorldPosition = transform.position;
     }
 
     private void Update()
     {
         MovePlatform();
+
+        DeltaMovement = transform.position - lastWorldPosition;
+        lastWorldPosition = transform.position;
+
+        if (moveMode == PlatformMoveMode.Flow && destroyWhenOffScreen)
+        {
+            CheckOffScreenAndDestroy();
+        }
     }
 
     private void MovePlatform()
+    {
+        switch (moveMode)
+        {
+            case PlatformMoveMode.PingPong:
+                MovePingPong();
+                break;
+
+            case PlatformMoveMode.Flow:
+                MoveFlow();
+                break;
+        }
+    }
+
+    private void MovePingPong()
     {
         if (useLocalPosition)
         {
@@ -39,7 +91,7 @@ public class MovingPlatformVertical : MonoBehaviour
             if (Vector3.Distance(transform.localPosition, targetPosition) <= 0.001f)
             {
                 direction *= -1;
-                SetNextTarget();
+                SetNextTargetForPingPong();
             }
         }
         else
@@ -53,50 +105,92 @@ public class MovingPlatformVertical : MonoBehaviour
             if (Vector3.Distance(transform.position, targetPosition) <= 0.001f)
             {
                 direction *= -1;
-                SetNextTarget();
+                SetNextTargetForPingPong();
             }
         }
     }
 
-    private void SetNextTarget()
+    private void MoveFlow()
     {
-        Vector3 offset = Vector3.up * moveDistance * direction;
+        Vector3 moveDir = (flowDirection == FlowDirection.Up) ? Vector3.up : Vector3.down;
+        Vector3 delta = moveDir * moveSpeed * Time.deltaTime;
 
         if (useLocalPosition)
-            targetPosition = startPosition + offset;
+            transform.localPosition += delta;
         else
-            targetPosition = startPosition + offset;
+            transform.position += delta;
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void SetNextTargetForPingPong()
     {
-        if (collision.transform.CompareTag("Player"))
+        Vector3 offset = Vector3.up * moveDistance * direction;
+        targetPosition = startPosition + offset;
+    }
+
+    private void CheckOffScreenAndDestroy()
+    {
+        Camera cam = Camera.main;
+        if (cam == null)
+            return;
+
+        Bounds bounds = GetWorldBounds();
+        Vector3 min = cam.WorldToViewportPoint(bounds.min);
+        Vector3 max = cam.WorldToViewportPoint(bounds.max);
+
+        bool completelyAbove = min.y > 1f + destroyViewportMargin;
+        bool completelyBelow = max.y < 0f - destroyViewportMargin;
+        bool completelyLeft = max.x < 0f - destroyViewportMargin;
+        bool completelyRight = min.x > 1f + destroyViewportMargin;
+
+        if (completelyAbove || completelyBelow || completelyLeft || completelyRight)
         {
-            collision.transform.SetParent(transform);
+            Destroy(gameObject);
         }
     }
 
-    private void OnCollisionExit2D(Collision2D collision)
+    private Bounds GetWorldBounds()
     {
-        if (collision.transform.CompareTag("Player"))
-        {
-            collision.transform.SetParent(null);
-        }
+        Renderer rend = GetComponent<Renderer>();
+        if (rend != null)
+            return rend.bounds;
+
+        Collider2D col2D = GetComponent<Collider2D>();
+        if (col2D != null)
+            return col2D.bounds;
+
+        return new Bounds(transform.position, Vector3.one * 0.5f);
     }
 
     private void OnDrawGizmosSelected()
     {
-        Gizmos.color = Color.cyan;
+        Vector3 origin;
 
-        Vector3 origin = Application.isPlaying
-            ? startPosition
-            : (useLocalPosition ? transform.localPosition : transform.position);
+        if (Application.isPlaying)
+            origin = startPosition;
+        else
+            origin = useLocalPosition ? transform.localPosition : transform.position;
 
-        Vector3 top = origin + Vector3.up * moveDistance;
-        Vector3 bottom = origin - Vector3.up * moveDistance;
+        if (moveMode == PlatformMoveMode.PingPong)
+        {
+            Gizmos.color = Color.cyan;
 
-        Gizmos.DrawLine(top, bottom);
-        Gizmos.DrawWireSphere(top, 0.1f);
-        Gizmos.DrawWireSphere(bottom, 0.1f);
+            Vector3 top = origin + Vector3.up * moveDistance;
+            Vector3 bottom = origin - Vector3.up * moveDistance;
+
+            Gizmos.DrawLine(top, bottom);
+            Gizmos.DrawWireSphere(top, 0.1f);
+            Gizmos.DrawWireSphere(bottom, 0.1f);
+        }
+        else if (moveMode == PlatformMoveMode.Flow)
+        {
+            Gizmos.color = Color.green;
+
+            Vector3 dir = (flowDirection == FlowDirection.Up) ? Vector3.up : Vector3.down;
+            Vector3 end = origin + dir * 2f;
+
+            Gizmos.DrawLine(origin, end);
+            Gizmos.DrawWireSphere(origin, 0.1f);
+            Gizmos.DrawWireSphere(end, 0.1f);
+        }
     }
 }
