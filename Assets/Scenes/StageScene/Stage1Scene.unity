@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MovingPlatformVertical
   moveMode: 1
-  moveSpeed: 3
+  moveSpeed: 4
   useLocalPosition: 0
   moveDistance: 2
   startGoingUp: 1
@@ -340,7 +340,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MovingPlatformVertical
   moveMode: 1
-  moveSpeed: 3
+  moveSpeed: 2.7
   useLocalPosition: 0
   moveDistance: 2
   startGoingUp: 1
@@ -716,7 +716,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MovingPlatformVertical
   moveMode: 1
-  moveSpeed: 3
+  moveSpeed: 1.7
   useLocalPosition: 0
   moveDistance: 2
   startGoingUp: 1
@@ -904,7 +904,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MovingPlatformVertical
   moveMode: 1
-  moveSpeed: 1
+  moveSpeed: 3
   useLocalPosition: 0
   moveDistance: 2
   startGoingUp: 1
@@ -2904,7 +2904,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MovingPlatformVertical
   moveMode: 1
-  moveSpeed: 1
+  moveSpeed: 2.5
   useLocalPosition: 0
   moveDistance: 2
   startGoingUp: 1
@@ -3212,7 +3212,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MovingPlatformVertical
   moveMode: 1
-  moveSpeed: 1
+  moveSpeed: 1.4
   useLocalPosition: 0
   moveDistance: 2
   startGoingUp: 1
