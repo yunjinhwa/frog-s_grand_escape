@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &344107160402998716
+--- !u!1 &1391365317341586907
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,11 +8,11 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5612718115651312831}
-  - component: {fileID: 3720128316875575267}
-  - component: {fileID: 1169834460058685090}
-  - component: {fileID: 8808966765384001194}
-  - component: {fileID: 1734466878331267025}
+  - component: {fileID: 7983803186109106064}
+  - component: {fileID: 5473537007999468336}
+  - component: {fileID: 3302673861164736653}
+  - component: {fileID: 4316455307351244724}
+  - component: {fileID: 393270915243626683}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -20,29 +20,29 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5612718115651312831
+--- !u!4 &7983803186109106064
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 344107160402998716}
+  m_GameObject: {fileID: 1391365317341586907}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.5, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalPosition: {x: -8.5, y: 0.5, z: 0}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &3720128316875575267
+--- !u!212 &5473537007999468336
 SpriteRenderer:
   serializedVersion: 2
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 344107160402998716}
+  m_GameObject: {fileID: 1391365317341586907}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -84,27 +84,28 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 10
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: bca52103b333b3349b1d6a156a9cb77b, type: 3}
+  m_Sprite: {fileID: -6447722072507503168, guid: 10f3cacccb0c4c547be76836eba20664,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.28, y: 1.28}
+  m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!95 &1169834460058685090
+--- !u!95 &3302673861164736653
 Animator:
   serializedVersion: 7
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 344107160402998716}
+  m_GameObject: {fileID: 1391365317341586907}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: b6474e01771c39c459cf571781462407, type: 2}
+  m_Controller: {fileID: 9100000, guid: 964ac89f42a10404185f2a2eba33b41e, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -116,42 +117,13 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &8808966765384001194
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 344107160402998716}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43580ce6337750248bc41baf8df526f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SmallScaleInteractive._2DCharacter.GridMovement
-  cellSize: 1
-  moveSpeed: 6
-  obstacleLayer:
-    serializedVersion: 2
-    m_Bits: 64
-  checkBoxSize: {x: 0.6, y: 0.6}
-  waterLayer:
-    serializedVersion: 2
-    m_Bits: 16
-  rideableLayer:
-    serializedVersion: 2
-    m_Bits: 8
-  jumpKey: 32
-  startPosition: {x: -8.5, y: 0, z: 0}
-  usePlacedPositionAsStart: 1
-  animator: {fileID: 1169834460058685090}
-  footOffset: {x: 0, y: -0.6}
---- !u!70 &1734466878331267025
+--- !u!70 &4316455307351244724
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 344107160402998716}
+  m_GameObject: {fileID: 1391365317341586907}
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
@@ -179,6 +151,36 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: -0.1}
-  m_Size: {x: 0.4, y: 0.7}
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 1, y: 1}
   m_Direction: 0
+--- !u!114 &393270915243626683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1391365317341586907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43580ce6337750248bc41baf8df526f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SmallScaleInteractive._2DCharacter.GridMovement
+  cellSize: 1
+  moveSpeed: 6
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  checkBoxSize: {x: 0.4, y: 0.4}
+  waterLayer:
+    serializedVersion: 2
+    m_Bits: 16
+  rideableLayer:
+    serializedVersion: 2
+    m_Bits: 8
+  jump: 1
+  jumpKey: 32
+  startPosition: {x: 0, y: 0, z: 0}
+  usePlacedPositionAsStart: 1
+  animator: {fileID: 3302673861164736653}
+  footOffset: {x: 0, y: -0.3}
