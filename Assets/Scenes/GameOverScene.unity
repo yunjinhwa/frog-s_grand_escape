@@ -914,8 +914,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4458a8b02b89c244fb56dc96975a3896, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ResultSceneUI
-  scoreText: {fileID: 0}
-  hpText: {fileID: 0}
+  scoreText: {fileID: 971370108}
+  hpText: {fileID: 471073275}
   scoreFormat: 'FINAL SCORE : {0}'
   hpFormat: 'REMAIN HP : {0}'
 --- !u!4 &1899794042
